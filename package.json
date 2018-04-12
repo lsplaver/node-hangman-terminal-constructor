@@ -1,0 +1,19 @@
+{
+  "name": "hangman-terminal-constructor",
+  "version": "1.0.0",
+  "description": "Hangman game in the terminal using node and constructors",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lsplaver/node-hangman-terminal-constructor.git"
+  },
+  "author": "Lawrence Splaver",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lsplaver/node-hangman-terminal-constructor/issues"
+  },
+  "homepage": "https://github.com/lsplaver/node-hangman-terminal-constructor#readme"
+}
