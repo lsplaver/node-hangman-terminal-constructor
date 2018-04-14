@@ -7,7 +7,7 @@ var letterArray = []; //already correctly guessed letters
 var incorrectCount = -99999;
 var promptForGuess;
 
-function Letters(letter, guessed) {
+var Letters = function(letter, guessed) {
     this.letter = letter;
     this.guessed = guessed;
     this.isGuessed = function () {
@@ -273,3 +273,5 @@ function getPhrase() {
 }
 
 getPhrase();
+
+module.exports = Letters;
