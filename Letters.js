@@ -22,13 +22,16 @@ function Letters(letter, guessed) {
         //     }
         // });
         var alreadyGuessed = false;
+        console.log("alreadyGuessed: " + alreadyGuessed);
+        console.log("guessed: " + this.guessed);
 
-        if (guessed) {
+        if (this.guessed) {
             for (var y = 0; y < letterArray.length; y++) {
                 if (this.letter === letterArray[y]) {
                     alreadyGuessed = true;
                 }
             };
+            console.log("new alreadyGuessed" + alreadyGuessed);
         }
         else {
             incorrectCount--;
@@ -45,7 +48,10 @@ function Letters(letter, guessed) {
         else {
             for (var x = 0; x < phraseArray.length; x++) {
                 if (this.letter === phraseArray[x]) {
+                    console.log("this.letter: " + this.letter);
+                    console.log("currentlyGuessedPhraseArray[" + x + "]: " + currentlyGussedPhraseArray[x]);
                     currentlyGussedPhraseArray[x] = this.letter;
+                    console.log("currentlyGuessedPhraseArray[" + x + "]: " + currentlyGussedPhraseArray[x]);
                 }
             };
 
@@ -84,8 +90,8 @@ function Letters(letter, guessed) {
                     console.log("The current character at tempCount in phraseArray is: " + phraseArray[tempCount]);
                     var tempChar = phraseArray[tempCount];
                     console.log("the current value of tempChar is: " + tempChar);
-                    switch(tempChar) { //phraseArray[tempCount]) {
-                    // if ((" " || "." || "," || "-" || "=" || "/" || "(" || ")" || "$" || "&") === phraseArray[/*element*/ tempCount]) {
+                    switch (tempChar) { //phraseArray[tempCount]) {
+                        // if ((" " || "." || "," || "-" || "=" || "/" || "(" || ")" || "$" || "&") === phraseArray[/*element*/ tempCount]) {
                         // console.log("The current character at tempCount in phraseArray is: " + phraseArray[tempCount]);
                         case " ":
                         case ".":
@@ -120,8 +126,8 @@ function Letters(letter, guessed) {
                         default:
                             break;
                     }
-                        // initGuessedPhraseArray();
-                        // });
+                    // initGuessedPhraseArray();
+                    // });
                     // }
                     tempCount++;
                     initGuessedPhraseArray();
@@ -151,8 +157,8 @@ function getPhrase() {
             if (tempCount < aPhrase.length) {
                 // var tempCount = aPhrase.length;
                 // for (var x = 0; x < aPhrase.length; x++) {
-                    console.log("The current character position of x is: " + tempCount);
-                    console.log("The current value of aPhrase at position of x is: " + aPhrase.charAt(tempCount));
+                console.log("The current character position of x is: " + tempCount);
+                console.log("The current value of aPhrase at position of x is: " + aPhrase.charAt(tempCount));
                 // phraseArray.fill(aPhrase.charAt(tempCount), tempCount, tempCount);
                 // phraseArray[tempCount] = aPhrase.charAt(tempCount);
                 phraseArray.push(aPhrase.charAt(tempCount));
@@ -240,7 +246,8 @@ function getPhrase() {
         // var newLetter = initializePhrase();
         var newLetter = aLetter;
         incorrectCount = 10;
-        promptForGuess = function() {
+        promptForGuess = function () {
+            console.log(currentlyGussedPhraseArray.toString());
             if (incorrectCount > 0) {
                 prompt.get(['letter'], function (err, result) {
                     console.log("You guessed: " + result.letter);
@@ -249,15 +256,15 @@ function getPhrase() {
                     // newLetter = new Letters(result.letter);
                     newLetter.letter = tempLetter;
                     console.log("The value of newLetter.letter is: " + newLetter.letter);
-                    newLetter.isLetter();
-                    tempLetter = Letters.guessed;
-                    newLetter.guessed = 
-                    // newLetter.isGuessed();
-                })
+                    tempLetter = newLetter.isLetter();
+                    newLetter.guessed = tempLetter;
+                    // newLetter.guessed = 
+                    newLetter.isGuessed();
+                    // console.log(aLetter.isWord());
+                    promptForGuess();
+                });
             }
-            // incorrectCount--;
-            // promptForGuess();
-    };
+        };
         promptForGuess();
     }
 
