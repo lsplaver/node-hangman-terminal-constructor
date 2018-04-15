@@ -67,14 +67,14 @@ function getPhrase() {
 
         // var aPhrase = "";
         var randomPhrases = ["supernatural", "all good things", "must come to an end", "lord of the rings", "star wars", "nightwish", "iron maiden"];
-        console.log("The values of randomPhrases are: " + randomPhrases.toString());
+        //  //  //  // console.log("The values of randomPhrases are: " + randomPhrases.toString());
         var tempNum = randomPhrases.length;
-        console.log("The value of tempNum is: " + tempNum);
+        //  //  //  // console.log("The value of tempNum is: " + tempNum);
         var randomPhraseNumber = Math.floor(Math.random() * tempNum); //* 7); //randomPhrases.length);
-        console.log("The value of randomPhraseNumber is: " + randomPhraseNumber);
+        //  //  //  // console.log("The value of randomPhraseNumber is: " + randomPhraseNumber);
         aPhrase = randomPhrases[randomPhraseNumber];
         var tempPhrase = aPhrase.toUpperCase();
-        console.log("tempPhrase is: " + tempPhrase);
+        //  //  //  // console.log("tempPhrase is: " + tempPhrase);
         // aPhrase = tempPhrase;
         // console.log("aPhrase is: " + aPhrase);
         newPhrase = new Word(tempPhrase);
@@ -87,8 +87,8 @@ function getPhrase() {
         for (var x = 0; x < tempPhrase.length /*tempLength /*this.aPhrase.length*/; x++) {
             newPhrase.phrase.push(newPhrase.aPhrase.charAt(x));
         };
-            console.log("newPhrase.aPhrase: " + newPhrase.aPhrase.toString());
-        console.log("newPhrase.phrase: " + newPhrase.phrase.toString());
+        //  //  //  // console.log("newPhrase.aPhrase: " + newPhrase.aPhrase.toString());
+        //  //  //  // console.log("newPhrase.phrase: " + newPhrase.phrase.toString());
         // newPhraseArray();
         initializePhrase(newPhrase.phrase);
     }
@@ -126,12 +126,12 @@ function getPhrase() {
         // var aLetter = new Letters(null, null);
         // aLetter.isWord();
         var aPhrase = phrase;
-        console.log("aphrase: " + aPhrase);
+        //  //  //  // console.log("aphrase: " + aPhrase);
         // console.log("newPhrase.phrase: " + newPhrase.phrase);
         // console.log(aLetter.isWord(newPhrase.phrase));
         // var tempArray = [];
         tempArray = aLetter.isWord(aPhrase);
-        console.log("tempArray: " + tempArray.toString()); // will be trimmed later as debugging winds down
+        //  //  //  // console.log(tempArray.toString()); // will be trimmed later as debugging winds down
         // return aLetter;
 
         // newPhrase
@@ -153,9 +153,9 @@ function getPhrase() {
             // newPhrase.phrase = newLetter.isWord.currentlyGussedPhraseArray; //.currentlyGussedPhraseArray;
             // remainingBlanks = newLetter.currentlyGussedPhraseArray.
             // console.log("newLetter.currentlyGuessedPhraseArray: " + newLetter.currentlyGussedPhraseArray); //.toString());
-            console.log("tempArray: " + tempArray.toString());
+            console.log(tempArray.toString());
             newPhrase.phrase = tempArray;
-            console.log("newPhrase.phrase:" + newPhrase.phrase); //.toString());
+            //  //  //  // console.log("newPhrase.phrase:" + newPhrase.phrase); //.toString());
             // while (incorrectCount > 0 ) {
                 var a = [];
                 for (var x = 0; x < newPhrase.phrase.length; x++) {
@@ -176,7 +176,7 @@ function getPhrase() {
                 prompt.get(['letter'], function (err, result) {
                     console.log("You guessed: " + result.letter);
                     var tempLetter = result.letter;
-                    console.log("tempLetter is: " + tempLetter);
+                    //  //  //  // console.log("tempLetter is: " + tempLetter);
                     // newLetter = new Letters(result.letter);
                     // newLetter.letter = tempLetter;
                     // newPhrase.checkLetter = tempLetter;
@@ -184,7 +184,7 @@ function getPhrase() {
                     // tempLetter = newLetter.isLetter();
                     var temp;
                     temp = newPhrase.checkLetter(tempLetter, newPhrase.aPhrase);
-                    console.log("temp: " + temp);
+                    //  //  //  // console.log("temp: " + temp);
                     // console.log("newPhrase: " + newPhrase);
                     // console.log("newLetter.guessed: " + newLetter.guessed);
                     newPhrase.letterString(temp, /*newLetter.guessed, */ tempLetter, newPhrase.aPhrase);

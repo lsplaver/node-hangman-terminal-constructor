@@ -14,11 +14,11 @@ var Letters = function(letter, guessed) {
         this.guessed = guessed;
         this.char = char;
         this.phrase = phrase;
-        console.log("init value of this.guessed in this.isGuessed: " + this.guessed);
-        console.log("init value of this.char in this.isGuessed: " + this.char);
-        console.log("init value of this.phrase in this.isGuessed: " + this.phrase);
+        //  //  //  // console.log("init value of this.guessed in this.isGuessed: " + this.guessed);
+        //  //  //  // console.log("init value of this.char in this.isGuessed: " + this.char);
+        //  //  //  // console.log("init value of this.phrase in this.isGuessed: " + this.phrase);
         var tempArray = this.phrase;
-        console.log("initi value of tempArray: " + tempArray);
+        //  //  //  // console.log("initi value of tempArray: " + tempArray);
         // phraseArray = new Array(tempArray.length);
         // console.log("init phraseArray.length: " + phraseArray.length);
         // for (var x = 0; x < tempArray; x++) {
@@ -26,7 +26,7 @@ var Letters = function(letter, guessed) {
         // }
         // // phraseArray.fill(this.phrase, 0);
         // console.log("new value of phraseArray after filling from this.phrase: " + phraseArray.toString());
-        console.log("letterArray.length: " + letterArray.length);
+        //  //  //  // console.log("letterArray.length: " + letterArray.length);
         if (letterArray.length = 0) {
             this.isWord(phrase);
         }
@@ -41,8 +41,8 @@ var Letters = function(letter, guessed) {
         //     }
         // });
         var alreadyGuessed = false;
-        console.log("alreadyGuessed: " + alreadyGuessed);
-        console.log("guessed: " + this.guessed);
+        //  //  //  // console.log("alreadyGuessed: " + alreadyGuessed);
+        //  //  //  // console.log("guessed: " + this.guessed);
 
         if (this.guessed) {
             for (var y = 0; y < letterArray.length; y++) {
@@ -51,7 +51,7 @@ var Letters = function(letter, guessed) {
                     alreadyGuessed = true;
                 }
             };
-            console.log("new alreadyGuessed: " + alreadyGuessed);
+            //  //  //  // console.log("new alreadyGuessed: " + alreadyGuessed);
         }
         else {
             incorrectCount--;
@@ -71,7 +71,7 @@ var Letters = function(letter, guessed) {
         }
         else {
             // console.log("phraseArray.length: " + phraseArray.length);
-            console.log("this.char: " + this.char);
+            //  //  //  // console.log("this.char: " + this.char);
             // console.log("this.letter: " + this.letter);
             for (var x = 0; x < tempArray.length; x++) {
             // for (var x = 0; x < phraseArray.length; x++) {
@@ -79,40 +79,40 @@ var Letters = function(letter, guessed) {
                 // if (this.char === phraseArray[x]) {
                 // if (this.letter === phraseArray[x]) {
                     // console.log("this.letter: " + this.letter);
-                    console.log("within loop this.char: " + this.char);
-                    console.log("currentlyGuessedPhraseArray[" + x + "]: " + currentlyGussedPhraseArray[x]);
+                    //  //  //  // console.log("within loop this.char: " + this.char);
+                    //  //  //  // console.log("currentlyGuessedPhraseArray[" + x + "]: " + currentlyGussedPhraseArray[x]);
                     currentlyGussedPhraseArray[x] = this.char; //this.letter;
-                    console.log("currentlyGuessedPhraseArray[" + x + "]: " + currentlyGussedPhraseArray[x]);
+                    //  //  //  // console.log("currentlyGuessedPhraseArray[" + x + "]: " + currentlyGussedPhraseArray[x]);
                 }
             };
 
             letterArray.push(this.char); //this.letter);
-            console.log("new letterArray.length: " + letterArray.length);
-            console.log("new letterArray.toString(): " + letterArray.toString());
-            console.log("new currentlyGuessedPhraseArray.toString(): " + currentlyGussedPhraseArray.toString());
+            //  //  //  // console.log("new letterArray.length: " + letterArray.length);
+            //  //  //  // console.log("new letterArray.toString(): " + letterArray.toString());
+            //  //  //  // console.log("new currentlyGuessedPhraseArray.toString(): " + currentlyGussedPhraseArray.toString());
             return currentlyGussedPhraseArray;
         }
         // promptForGuess();
     };
     this.isLetter = function (letter, phrase) {
         this.letter = letter;
-        console.log("this.letter: " + this.letter);
+        //  //  //  // console.log("this.letter: " + this.letter);
         this.phrase = phrase;
-        console.log("this.phrase: " + this.phrase);
+        //  //  //  // console.log("this.phrase: " + this.phrase);
         this.guessed = false;
         var phraseArray = this.phrase;
-        console.log("The current value of this.guessed is: " + this.guessed);
-        console.log("The current value of phraseArray is: " + phraseArray.toString());
+        //  //  //  // console.log("The current value of this.guessed is: " + this.guessed);
+        //  //  //  // console.log("The current value of phraseArray is: " + phraseArray.toString());
         var x = 0;
         // phraseArray.forEach(function(x) {
         for (x; x < phraseArray.length; x++) {
-            console.log("The current value of this.letter is: " + this.letter);
-            console.log("The current value of phraseArray[element] is: " + phraseArray[x]);
+            //  //  //  // console.log("The current value of this.letter is: " + this.letter);
+            //  //  //  // console.log("The current value of phraseArray[element] is: " + phraseArray[x]);
             if (this.letter === phraseArray[x]) {
                 this.guessed = true;
             }
         };
-        console.log("The current value of this.guessed is: " + this.guessed);
+        //  //  //  // console.log("The current value of this.guessed is: " + this.guessed);
         return this.guessed;
         // var tempLetter = new Letters(this.letter, this.guessed);
         // tempLetter.isGuessed();
@@ -120,15 +120,15 @@ var Letters = function(letter, guessed) {
     this.isWord = function (phraseArray) {
         // if ((this.letter && this.guessed) === null) {
             var tempCount = 0;
-            console.log("The current value of tempCount in .isWord is: " + tempCount);
-            console.log("The current value of phraseArray is: " + phraseArray.toString());
+            //  //  //  // console.log("The current value of tempCount in .isWord is: " + tempCount);
+            //  //  //  // console.log("The current value of phraseArray is: " + phraseArray.toString());
             var initGuessedPhraseArray = function () {
                 // phraseArray.forEach(element => {
                 if (tempCount < phraseArray.length) {
-                    console.log("tempCount is: " + tempCount + " which is less than phraseArray.length: " + phraseArray.length);
-                    console.log("The current character at tempCount in phraseArray is: " + phraseArray[tempCount]);
+                    //  //  //  // console.log("tempCount is: " + tempCount + " which is less than phraseArray.length: " + phraseArray.length);
+                    //  //  //  // console.log("The current character at tempCount in phraseArray is: " + phraseArray[tempCount]);
                     var tempChar = phraseArray[tempCount];
-                    console.log("the current value of tempChar is: " + tempChar);
+                    //  //  //  // console.log("the current value of tempChar is: " + tempChar);
                     switch (tempChar) { //phraseArray[tempCount]) {
                         // if ((" " || "." || "," || "-" || "=" || "/" || "(" || ")" || "$" || "&") === phraseArray[/*element*/ tempCount]) {
                         // console.log("The current character at tempCount in phraseArray is: " + phraseArray[tempCount]);
@@ -142,16 +142,16 @@ var Letters = function(letter, guessed) {
                         case ")":
                         case "$":
                         case "&":
-                            console.log("The value of currentlyGuessedPhraseArray at tempCount position before slice is: " + currentlyGussedPhraseArray[tempCount]);
+                            //  //  //  // console.log("The value of currentlyGuessedPhraseArray at tempCount position before slice is: " + currentlyGussedPhraseArray[tempCount]);
                             currentlyGussedPhraseArray[tempCount] = phraseArray[tempCount]; //..splice(tempCount, 1, phraseArray[/*element*/ tempCount]);
-                            console.log("The value of currentlyGuessedPhraseArray at tempCount position after slice is: " + currentlyGussedPhraseArray[tempCount]);
+                            //  //  //  // console.log("The value of currentlyGuessedPhraseArray at tempCount position after slice is: " + currentlyGussedPhraseArray[tempCount]);
                             var tempCount2 = 0;
                             var initLetterArray = function () {
                                 if (tempCount2 <= letterArray.length) {
                                     // letterArray.forEach(element2 => {
                                     if (letterArray[/*element2*/ tempCount2] !== (" " || "." || "," || "-" || "=" || "/" || "(" || ")" || "$" || "&")) {
                                         letterArray.push(phraseArray[/*element*/ tempCount]);
-                                        console.log("values of letterArray: " + letterArray.toString());
+                                        //  //  //  // console.log("values of letterArray: " + letterArray.toString());
                                         tempCount2++;
                                         initLetterArray();
                                     }
@@ -164,11 +164,11 @@ var Letters = function(letter, guessed) {
                             // tempCount++;
                             break;
                         default:
-                            console.log("The value of currentlyGuessedPhraseArray at tempCount position before slice is: " + currentlyGussedPhraseArray[tempCount]);
+                            //  //  //  // console.log("The value of currentlyGuessedPhraseArray at tempCount position before slice is: " + currentlyGussedPhraseArray[tempCount]);
                             currentlyGussedPhraseArray[tempCount] = phraseArray[tempCount]; //..splice(tempCount, 1, phraseArray[/*element*/ tempCount]);
-                            console.log("The value of currentlyGuessedPhraseArray at tempCount position after slice is: " + currentlyGussedPhraseArray[tempCount]);
+                            //  //  //  // console.log("The value of currentlyGuessedPhraseArray at tempCount position after slice is: " + currentlyGussedPhraseArray[tempCount]);
                             currentlyGussedPhraseArray[tempCount] = "_";
-                            console.log("The value of currentlyGuessedPhraseArray after hiding the letter: " + currentlyGussedPhraseArray[tempCount]);
+                            //  //  //  // console.log("The value of currentlyGuessedPhraseArray after hiding the letter: " + currentlyGussedPhraseArray[tempCount]);
                             break;
                     }
                     // initGuessedPhraseArray();
@@ -180,7 +180,7 @@ var Letters = function(letter, guessed) {
             };
 
             initGuessedPhraseArray();
-            console.log("The current string value of currentGuessedPhraseArray is: " + currentlyGussedPhraseArray.toString());
+            //  //  //  // console.log("The current string value of currentGuessedPhraseArray is: " + currentlyGussedPhraseArray.toString());
             return currentlyGussedPhraseArray;
         // }
     };

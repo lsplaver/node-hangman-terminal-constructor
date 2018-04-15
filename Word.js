@@ -13,27 +13,27 @@ var Word = function(aPhrase, phrase) {
     this.letterString = function(guessed, aChar, phrase) {
         var tempString = "";
         this.guessed = guessed;
-        console.log("this.guessed in Word.js: " + this.guessed);
+        //  //  //  // console.log("this.guessed in Word.js: " + this.guessed);
         this.aChar = aChar;
-        console.log("this.aChar in letterString: " + this.aChar);
+        //  //  //  // console.log("this.aChar in letterString: " + this.aChar);
         this.phrase = phrase;
-        console.log("this.phrase in letterString: " + this.phrase);
+        //  //  //  // console.log("this.phrase in letterString: " + this.phrase);
         var tempPhrase = this.phrase;
-        console.log("tempPhrasse: " + tempPhrase);
+        //  //  //  // console.log("tempPhrasse: " + tempPhrase);
         // this.phrase
-        console.log("tempString: " + tempString);
+        //  //  //  // console.log("tempString: " + tempString);
         var x = 0;
         var newGuess = this.guessed;
         var newChar = this.aChar;
         var tempFunc = function() {
             // if (x < tempPhrase.length) {
                 // for (var x = 0; x < this.aPhrase.length; /*tempLength;*/ x++) {
-                    console.log("this.phrase[" + x + "]: " + tempPhrase[x]); //this.phrase[x]); //.charAt(x)); // [x]); // .toString());
+                    //  //  //  // console.log("this.phrase[" + x + "]: " + tempPhrase[x]); //this.phrase[x]); //.charAt(x)); // [x]); // .toString());
                     var tempChar = tempPhrase[x]; //this.phrase[x];
                     var letterString = new Letters(); //tempChar); // this.phrase[x]); //.charAt(x));
                     // var newGuess = this.guessed;
-                    console.log("newGuess in Word.js: " + newGuess);
-                    console.log("newChar in Word.js: " + newChar);
+                    //  //  //  // console.log("newGuess in Word.js: " + newGuess);
+                    //  //  //  // console.log("newChar in Word.js: " + newChar);
                     var tempArray;
                     tempArray = letterString.isGuessed(/*this.guessed, */ newGuess, newChar, tempPhrase); //this.tempChar);
                     // for (var y = 0; y < tempArray.length; y++) {
@@ -58,9 +58,9 @@ var Word = function(aPhrase, phrase) {
     };
     this.checkLetter = function(aChar, phrase) {
         var tempChar = aChar;
-        console.log("tempChar in Word.js: " + tempChar);
+        //  //  //  // console.log("tempChar in Word.js: " + tempChar);
         var tempPhrase = phrase;
-        console.log("tempPhrase in Word.js: " + tempPhrase);
+        //  //  //  // console.log("tempPhrase in Word.js: " + tempPhrase);
         var checkLetter = new Letters(); //null, aChar);
         // for (var x = 0; x < this.phrase.length; x++) {
         checkLetter.isLetter(tempChar, tempPhrase);
