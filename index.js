@@ -20,7 +20,7 @@ function getPhrase() {
         var tempNum = randomPhrases.length;
         var randomPhraseNumber = Math.floor(Math.random() * tempNum);
         aPhrase = randomPhrases[randomPhraseNumber];
-        var tempPhrase = aPhrase.toUpperCase();
+        var tempPhrase = aPhrase;
         newPhrase = new Word(tempPhrase);
         newPhrase.aPhrase = tempPhrase;
         newPhrase.phrase = new Array();
