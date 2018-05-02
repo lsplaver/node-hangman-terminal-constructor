@@ -64,7 +64,7 @@ function getPhrase() {
             if (incorrectCount >= 0) {
                 prompt.get(['letter'], function (err, result) {
                     console.log("You guessed: " + result.letter);
-                    var tempLetter = result.letter;
+                    var tempLetter = result.letter.toLowerCase();
                     var temp;
                     temp = newPhrase.checkLetter(tempLetter, newPhrase.aPhrase);
                     newPhrase.letterString(temp, tempLetter, newPhrase.aPhrase);
